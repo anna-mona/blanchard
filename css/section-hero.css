@@ -1,0 +1,408 @@
+.section-hero {
+  height: 700px;
+  background-color: #333;
+  background-size: cover;
+}
+
+.section-hero__swiper-bg {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  animation: hero-background 5.4s linear infinite alternate;
+  -webkit-animation: hero-background 5.4s linear infinite alternate;
+}
+
+@keyframes hero-background  {
+  from { background-size: 100%;}
+  to { background-size: 105%; }
+ }
+ @-webkit-keyframes hero-background  {
+  from { background-size: 100%;}
+  to { background-size: 105%; }
+ }
+
+.section-hero__swiper-bg-1 {
+  background-image: url("../img/hero-bg-1.png");
+}
+
+.section-hero__swiper-bg-2 {
+  background-image: url("../img/hero-bg-2.png");
+}
+
+.section-hero__swiper-bg-3 {
+  background-image: url("../img/hero-bg-3.png");
+}
+
+.section-hero__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.section-hero__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+
+.section-hero__select-list {
+  display: flex;
+}
+
+.section-hero__select-item:not(:last-child) {
+  margin-right: 96px;
+}
+
+.section-hero__search {
+  position: relative;
+  width: 250px;
+  height: 26px;
+}
+
+.section-hero__search-button {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-image: url("../img/search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  transform: translate(-29px, 5px);
+}
+
+.section-hero__search-input {
+  padding: 2px 0;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  background-color: transparent;
+  transition: border-bottom .2s;
+  cursor: pointer;
+}
+
+.section-hero__search-input::placeholder {
+  color: #fff;
+}
+
+.section-hero__search-input:hover {
+  border-bottom: 1px solid var(--violet-hover);
+}
+
+.section-hero__search-input:focus {
+  border-bottom: 1px solid var(--violet-active) !important;
+}
+
+.section-hero__search-input:focus::placeholder {
+  opacity: 0;
+}
+
+.section-hero__info {
+  position: absolute;
+  padding-top: 130px;
+  z-index: 2;
+}
+
+.section-hero__title {
+  margin-bottom: 10px;
+  width: 595px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 83px;
+  color: var(--white-color);
+}
+
+.section-hero__text {
+  margin-bottom: 92px;
+  width: 580px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--white-color);
+}
+
+.section-hero__btn {
+  max-width: 450px;
+}
+
+/* Select  */
+
+.choices {
+  background-color: transparent;
+}
+
+.choices__inner {
+  padding: 0;
+  border: none;
+  min-height: 10px !important;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  background-color: transparent;
+  background-image: url("../img/select-arrow-closed.svg");
+  background-repeat: no-repeat;
+  background-position: right 6px top 15px;
+  transition-property: background-image, background-color, color;
+  transition-duration: .3s;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0px;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--single {
+  padding: 4px 22px 4px 4px;
+}
+
+.is-open .choices__inner,
+.is-focused .choices__inner {
+  position: relative;
+}
+
+.choices__inner:hover {
+  color: var(--violet-hover);
+  background-color: transparent;
+  background-image: url("../img/select-arrow-hover.svg");
+}
+
+.is-focused .choices__inner {
+  border-radius: 0;
+  background-color: var(--violet-active);
+  background-image: url("../img/select-arrow-closed.svg");
+}
+
+.is-open .choices__inner {
+  color: var(--violet-active);
+  background-color: transparent;
+  background-image: url("../img/select-arrow-active.svg");
+}
+
+.choices__list--dropdown .choices__list {
+  max-height: 220px;
+}
+
+.choices__list--dropdown {
+  margin-top: 19px;
+  padding: 40px;
+  border: none;
+  width: 300px;
+  max-height: 300px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.choices__list--dropdown .choices__item {
+  padding: 14px 11px;
+  border: 2px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-property: background-image, border;
+  transition-duration: .3s;
+}
+
+.choices__list--dropdown .choices__item:hover {
+  border: 2px solid #9D5CD0;
+}
+
+.choices__list--dropdown .choices__item:active {
+  border: 2px solid #D1A9F0;
+}
+
+
+.choices__list--dropdown .choices__item:focus,
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #333;
+  border: 2px solid #9D5CD0;
+}
+
+.choices__list--dropdown .choices__item:first-child {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section-hero__tintoretto {
+  background-image: url("../img/select-tintoretto.jpg");
+}
+.choices__list--dropdown .section-hero__tintoretto:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-tintoretto.jpg");
+}
+
+.section-hero__friedrich {
+  background-image: url("../img/select-friedrich.jpg");
+}
+.choices__list--dropdown .section-hero__friedrich:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-friedrich.jpg");
+}
+
+.section-hero__leonardo {
+  background-image: url("../img/select-leonardo.jpg");
+}
+.choices__list--dropdown .section-hero__leonardo:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-leonardo.jpg");
+}
+
+.section-hero__verrocchio {
+  background-image: url("../img/select-verrocchio.jpg");
+}
+.choices__list--dropdown .section-hero__verrocchio:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-verrocchio.jpg");
+}
+
+.section-hero__monet {
+  background-image: url("../img/select-monet.jpg");
+}
+.choices__list--dropdown .section-hero__monet:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-monet.jpg");
+}
+
+.section-hero__sisley {
+  background-image: url("../img/select-sisley.jpg");
+}
+.choices__list--dropdown .section-hero__sisley:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-sisley.jpg");
+}
+
+.section-hero__manet {
+  background-image: url("../img/select-manet.jpg");
+}
+.choices__list--dropdown .section-hero__manet:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-manet.jpg");
+}
+
+.section-hero__renoir {
+  background-image: url("../img/select-renoir.jpg");
+}
+.choices__list--dropdown .section-hero__renoir:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-renoir.jpg");
+}
+
+.section-hero__van-gogh {
+  background-image: url("../img/select-van-gogh.jpg");
+}
+.choices__list--dropdown .section-hero__van-gogh:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-van-gogh.jpg");
+}
+
+.section-hero__cezanne {
+  background-image: url("../img/select-cezanne.jpg");
+}
+.choices__list--dropdown .section-hero__cezanne:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-cezanne.jpg");
+}
+
+.section-hero__gauguin {
+  background-image: url("../img/select-gauguin.jpg");
+}
+.choices__list--dropdown .section-hero__gauguin:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-gauguin.jpg");
+}
+
+.section-hero__seurat {
+  background-image: url("../img/select-seurat.jpg");
+}
+.choices__list--dropdown .section-hero__seurat:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-seurat.jpg");
+}
+
+.section-hero__kandinskiy {
+  background-image: url("../img/select-kandinskiy.jpg");
+}
+.choices__list--dropdown .section-hero__kandinskiy:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-kandinskiy.jpg");
+}
+
+.section-hero__marinetti {
+  background-image: url("../img/select-marinetti.jpg");
+}
+.choices__list--dropdown .section-hero__marinetti:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-marinetti.jpg");
+}
+
+.section-hero__malewicz {
+  background-image: url("../img/select-malewicz.jpg");
+}
+.choices__list--dropdown .section-hero__malewicz:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-malewicz.jpg");
+}
+
+.section-hero__picasso {
+  background-image: url("../img/select-picasso.jpg");
+}
+.choices__list--dropdown .section-hero__picasso:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-picasso.jpg");
+}
+
+.section-hero__carra {
+  background-image: url("../img/select-carra.jpg");
+}
+.choices__list--dropdown .section-hero__carra:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-carra.jpg");
+}
+
+.section-hero__pratella {
+  background-image: url("../img/select-pratella.jpg");
+}
+.choices__list--dropdown .section-hero__pratella:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-pratella.jpg");
+}
+
+.section-hero__severini {
+  background-image: url("../img/select-severini.jpg");
+}
+.choices__list--dropdown .section-hero__severini:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-severini.jpg");
+}
+
+.section-hero__balla {
+  background-image: url("../img/select-balla.jpg");
+}
+.choices__list--dropdown .section-hero__balla:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url("../img/select-balla.jpg");
+}
+
+/* Scroll */
+
+.simplebar-track.simplebar-vertical {
+  width: 2px;
+  background: #000;
+}
+
+.simplebar-track {
+  right: -19px;
+  z-index: inherit;
+}
+
+.simplebar-scrollbar:before {
+  right: 0;
+  left: 0;
+  border-radius: 0;
+  background: #fff;
+  opacity: 1;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+}

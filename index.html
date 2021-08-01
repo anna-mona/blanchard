@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchard | художественная галерея</title>
+
+  <link rel="preload" href="fonts/Open-Sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Open-Sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Open-Sans-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/section-hero.css">
+  <link rel="stylesheet" href="css/section-us.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script defer src="js/choices.min.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="js/index.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a class="header__logo">
+        <img src="/img/logo.svg" alt="Blanchart художественная галерея - логотип" class="header__logo-img">
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#sectionUs" class="header__nav-link">О нас</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Галерея</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Каталог</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">События</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Издания</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Проекты</a>
+          </li>
+
+          <li class="header__nav-item">
+            <a href="" class="header__nav-link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="" class="header__log-in-button"><span class="header__log-in-icon"></span>Вход</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-hero section-mb swiper-container">
+      <h1 class="visually-hidden">Blanchard художественная галерея</h1>
+
+      <div class="section-hero__header">
+        <div class="container section-hero__nav">
+          <ul class="section-hero__select-list">
+            <li class="section-hero__select-item">
+              <select name="realism" class="section-hero__select">
+                <option value="" class="section-hero__option" selected disabled>Реализм</option>
+                <option value="tintoretto" class="section-hero__option">Тинторетто</option>
+                <option value="friedrich" class="section-hero__option">Фридрих</option>
+                <option value="leonardo" class="section-hero__option">Леонардо</option>
+                <option value="verrocchio" class="section-hero__option">Верроккьо</option>
+              </select>
+            </li>
+
+            <li class="section-hero__select-item">
+              <select name="impressionism" class="section-hero__select">
+                <option value="" class="section-hero__option" selected disabled>Импрессионизм</option>
+                <option value="monet" class="section-hero__option">Моне</option>
+                <option value="sisley" class="section-hero__option">Сислей</option>
+                <option value="manet" class="section-hero__option">Мане</option>
+                <option value="renoir" class="section-hero__option">Ренуар</option>
+              </select>
+            </li>
+
+            <li class="section-hero__select-item">
+              <select name="post-impressionism" class="section-hero__select">
+                <option value="" class="section-hero__option" selected disabled>Постимпрессионизм</option>
+                <option value="van-gogh" class="section-hero__option">Ван Гог</option>
+                <option value="cezanne" class="section-hero__option">Сезанн</option>
+                <option value="gauguin" class="section-hero__option">Гоген</option>
+                <option value="seurat" class="section-hero__option">Сёра</option>
+              </select>
+            </li>
+
+            <li class="section-hero__select-item">
+              <select name="avant-garde" class="section-hero__select">
+                <option value="" class="section-hero__option" selected disabled>Авангард</option>
+                <option value="kandinskiy" class="section-hero__option">Кандинский</option>
+                <option value="marinetti" class="section-hero__option">Маринетти</option>
+                <option value="malewicz" class="section-hero__option">Малевич</option>
+                <option value="picasso" class="section-hero__option">Пикассо</option>
+              </select>
+            </li>
+
+            <li class="section-hero__select-item">
+              <select name="futurism" class="section-hero__select">
+                <option value="" class="section-hero__option" selected disabled>Футуризм</option>
+                <option value="carra" class="section-hero__option">Карра</option>
+                <option value="pratella" class="section-hero__option">Прателла</option>
+                <option value="severini" class="section-hero__option">Северини</option>
+                <option value="balla" class="section-hero__option">Балла</option>
+              </select>
+            </li>
+          </ul>
+
+          <div class="section-hero__search">
+            <button type="submit" class="section-hero__search-button"></button>
+            <input type="search" class="section-hero__search-input" placeholder="Поиск по сайту">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-hero__info">
+          <p class="section-hero__title">
+            Прикоснитесь к прекрасному
+          </p>
+
+          <p class="section-hero__text">
+            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+          </p>
+
+          <a href="" class="violet-btn section-hero__btn">
+            Подписаться на рассылку
+          </a>
+        </div>
+      </div>
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide section-hero__swiper-bg section-hero__swiper-bg-1"></div>
+        <div class="swiper-slide section-hero__swiper-bg section-hero__swiper-bg-2"></div>
+        <div class="swiper-slide section-hero__swiper-bg section-hero__swiper-bg-3"></div>
+      </div>
+    </section>
+
+    <section id="sectionUs" class="section-us section-mb">
+      <div class="container">
+        <h2 class="section__heading section__dark-heading">
+          О нас
+        </h2>
+
+        <p class="section__description section-us__description">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div>
+        <a class="footer__logo">
+          <img src="/img/logo.svg" alt="Blanchart художественная галерея - логотип" class="header__logo-img">
+        </a>
+      </div>
+
+      <div>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link footer__social-link-vk"></a>
+          </li>
+
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link footer__social-link-inst"></a>
+          </li>
+
+          <li class="footer__social-item">
+            <a href="" class="footer__social-link footer__social-link-fb"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
