@@ -136,7 +136,7 @@
 .header__bottom-block {
   display: none;
   position: absolute;
-  top: 70px;
+  top: 50px;
   padding: 40px;
   width: 300px;
   max-height: 300px;
