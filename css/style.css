@@ -72,10 +72,10 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, p {
+/* h1, h2, h3, p {
   margin: 0;
   padding: 0;
-}
+} */
 
 .container {
   margin: 0 auto;
@@ -153,6 +153,7 @@ h1, h2, h3, p {
 }
 
 .section__heading {
+  margin-top: 0;
   margin-bottom: 17px;
   font-weight: 400;
   font-size: 48px;
@@ -168,6 +169,7 @@ h1, h2, h3, p {
 }
 
 .section__description {
+  margin-top: 0;
   max-width: 1080px;
   line-height: 32px;
   color: #333;
