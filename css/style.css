@@ -27,7 +27,6 @@
 
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -55,7 +54,6 @@ body {
   font-size: 16px;
   color: #333;
   line-height: 1;
-  overflow-x: hidden;
 }
 
 button, input {
@@ -71,11 +69,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-/* h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-} */
 
 .container {
   margin: 0 auto;
@@ -170,6 +163,7 @@ a {
 
 .section__description {
   margin-top: 0;
+  margin-bottom: 0;
   max-width: 1080px;
   line-height: 32px;
   color: #333;

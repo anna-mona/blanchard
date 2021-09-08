@@ -12,7 +12,7 @@
 }
 
 .header__nav {
-  transform: translateX(-46px);
+  transform: translateX(-44px);
 }
 
 .header__nav-list {
@@ -50,34 +50,44 @@
 }
 
 .header__log-in-button {
-  padding: 6px 3px 6px 24px;
-  min-width: 75px;
+  padding: 3px 6px;
+  min-width: 70px;
   font-size: 18px;
   line-height: 24px;
   color: var(--white-color);
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: 18px 13px;
-  background-image: url("/img/log-in.svg");
-  transform: translateX(6px);
-  transition: color .3s, background-color .3s, background-image .3s;
+  transform: translateX(9px);
+  transition: color .3s, background-color .3s;
+}
+
+.header__log-in-icon {
+  margin-right: 5px;
+}
+
+.header__log-in-icon path {
+  transition: fill .3s;
 }
 
 .header__log-in-button:hover {
   color: var(--violet-hover);
-  background-image: url("/img/log-in-hover.svg");
+}
+.header__log-in-button:hover .header__log-in-icon path {
+  fill: var(--violet-hover);
 }
 
 .header__log-in-button:active {
   color: #9D5CD0 !important;
   background-color: #000 !important;
-  background-image: url("/img/log-in-active.svg") !important;
+}
+.header__log-in-button:active .header__log-in-icon path {
+  fill: #9D5CD0;
 }
 
 .header__log-in-button:focus {
   color: var(--white-color);
   background-color: var(--violet-active);
-  background-image: url("/img/log-in.svg");
+}
+.header__log-in-button:focus .header__log-in-icon path {
+  fill: var(--white-color);
 }
 
 .header__bottom-menu {
@@ -104,17 +114,18 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  transform: translateX(-6px);
+  transform: translateX(-8px);
 }
 
 .header__botoom-nav-item:not(:last-child) {
-  margin-right: 68px;
+  margin-right: 85px;
 }
 
 .header__list-name {
   display: block;
   position: relative;
-  padding: 3px 22px 3px 6px;
+  padding: 3px 6px;
+  border: none;
   font-size: 18px;
   line-height: 24px;
   color: #fff;
@@ -149,16 +160,16 @@
   stroke: #fff;
 }
 
-.header__list-name.is-active {
+.header__botoom-nav-item.is-active .header__list-name {
   color: #7943A4;
   background-color: transparent;
 }
 
-.header__list-name.is-active .header__list-icon {
+.header__botoom-nav-item.is-active .header__list-name .header__list-icon {
   transform: rotate(-180deg);
 }
 
-.header__list-name.is-active .header__list-icon path {
+.header__botoom-nav-item.is-active .header__list-name .header__list-icon path {
   stroke: var(--violet-active);
 }
 
@@ -172,14 +183,14 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.header__bottom-block.is-active {
+.header__botoom-nav-item.is-active .header__bottom-block {
   display: block;
 }
 
 .header__bottom-list {
   margin: 0;
   padding: 0;
-  height: 220px;
+  max-height: 220px;
   list-style: none;
 }
 
@@ -381,18 +392,19 @@
 
 .header__search {
   display: flex;
-  width: 255px;
+  width: 260px;
   height: 26px;
+  transform: translateX(10px);
 }
 
 .header__search-button {
   display: block;
-  margin-right: 6px;
+  margin-right: 8px;
   border: none;
   height: 22px;
   width: 22px;
   background-color: transparent;
-  transform: translateY(5px);
+  transform: translate(-7px, 5px);
   cursor: pointer;
 }
 
@@ -414,8 +426,7 @@
 }
 
 .header__search-input {
-  margin-left: 9px;
-  padding: 2px 0;
+  padding: 2px 9px 2px 0;
   border: none;
   border-bottom: 1px solid #fff;
   width: 218px;
