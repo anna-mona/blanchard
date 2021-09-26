@@ -168,3 +168,24 @@ a {
   line-height: 32px;
   color: #333;
 }
+
+.violet-link {
+  padding: 0 2px;
+  color: var(--violet-hover);
+  transition-property: color, background-color;
+  transition-duration: .3s;
+}
+
+.violet-link:hover {
+  color: #9D5CD0;
+}
+
+.violet-link:active {
+  color: var(--violet-active) !important;
+  background-color: transparent !important;
+}
+
+.violet-link:focus {
+  color: #fff;
+  background-color: #9D5CD0;
+}

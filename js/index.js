@@ -19,13 +19,44 @@ function activeLink(event) {
 
 // Hero-swiper
 
-const swiper = new Swiper('.section-hero__swiper-container', {
+var swiperHero = new Swiper('.section-hero__swiper-container', {
   loop: true,
   autoplay: {
     delay: 5000,
   },
   speed: 500,
 });
+
+// Gallery-swiper
+
+var swiperGallery = new Swiper(".section-gallery__swiper-container", {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  grid: {
+    rows: 2,
+  },
+  spaceBetween: 50,
+  pagination: {
+    el: ".section-gallery__swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".section-gallery__swiper-button-next",
+    prevEl: ".section-gallery__swiper-button-prev",
+    clickable: true,
+  },
+});
+
+// Select
+
+const element = document.querySelector('.section-gallery__select');
+const choicesGallery = new Choices(element, {
+  silent: true,
+  searchEnabled: false,
+  itemSelectText: '',
+  shouldSort: false,
+});
+
 
 
 
