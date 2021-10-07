@@ -35,7 +35,7 @@ var swiperGallery = new Swiper(".section-gallery__swiper-container", {
   grid: {
     rows: 2,
   },
-  spaceBetween: 50,
+  spaceBetween: 43,
   pagination: {
     el: ".section-gallery__swiper-pagination",
     type: "fraction",
