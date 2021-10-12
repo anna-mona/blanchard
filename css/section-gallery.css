@@ -1,6 +1,7 @@
 .section-gallery{
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-image: url("../img/gallery-bg.jpg");
 }
 
@@ -8,7 +9,7 @@
   display: flex;
   flex-direction: row;
   padding-top: 80px;
-  padding-bottom: 65px;
+  padding-bottom: 64px;
 }
 
 .section-gallery__left {
@@ -222,15 +223,22 @@
 }
 
 .section-gallery__swiper-nav-item:not(:last-child) {
-  margin-right: 18px;
+  margin-right: 19px;
 }
 
 .section-gallery__swiper-button-next,
 .section-gallery__swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
+  background-color: #666;
   cursor: pointer;
-  transition: opacity .3s;
+  transition-property: opacity, background-color;
+  transition-duration: .3s;
 }
 
 .section-gallery__swiper-button-prev.swiper-button-disabled,
@@ -238,28 +246,24 @@
   opacity: .5;
 }
 
-.section-gallery__swiper-button-icon path {
-  transition: fill .3s linear;
-}
-
-.section-gallery__swiper-button-prev.swiper-button-disabled:focus .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-next.swiper-button-disabled:focus .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-prev.swiper-button-disabled:hover .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-next.swiper-button-disabled:hover .section-gallery__swiper-button-icon path {
-  fill: #666;
+.section-gallery__swiper-button-prev.swiper-button-disabled:focus,
+.section-gallery__swiper-button-next.swiper-button-disabled:focus,
+.section-gallery__swiper-button-prev.swiper-button-disabled:hover,
+.section-gallery__swiper-button-next.swiper-button-disabled:hover {
+  background-color: #666;
   cursor: default;
 }
 
-.section-gallery__swiper-button-next:hover .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-prev:hover .section-gallery__swiper-button-icon path {
-  fill: #9D5CD0;
+.section-gallery__swiper-button-next:hover,
+.section-gallery__swiper-button-prev:hover {
+  background-color: #9D5CD0;
 }
 
-.section-gallery__swiper-button-next:focus .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-prev:focus .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-next:active .section-gallery__swiper-button-icon path,
-.section-gallery__swiper-button-prev:active .section-gallery__swiper-button-icon path {
-  fill: var(--violet-active);
+.section-gallery__swiper-button-next:focus,
+.section-gallery__swiper-button-prev:focus,
+.section-gallery__swiper-button-next:active,
+.section-gallery__swiper-button-prev:active {
+  background-color: var(--violet-active);
 }
 
 .section-gallery__swiper-pagination.swiper-pagination-fraction {
